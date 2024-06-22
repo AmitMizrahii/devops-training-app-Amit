@@ -49,8 +49,10 @@ jobs:
           username: ec2-user
           key: ${{ env.BASTION_KEY }}
           script: |
-            npm install
-            npm db:migrate
+            sudo apt update
+            sudo apt install -y nodejs npm  
+            npm install @prisma/cli
+            npx prisma db push --schema src/schema.prisma
 
       - name: Login to Amazon ECR
         id: login-ecr
