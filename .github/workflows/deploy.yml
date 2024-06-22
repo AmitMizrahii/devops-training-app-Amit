@@ -49,8 +49,8 @@ jobs:
           username: ec2-user
           key: ${{ env.BASTION_KEY }}
           script: |
-            sudo apt update
-            sudo apt install -y nodejs npm  
+            curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+            sudo yum install -y nodejs
             npm install @prisma/cli
             npx prisma db push --schema src/schema.prisma
 
