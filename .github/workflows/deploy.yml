@@ -12,8 +12,8 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       REGISTRY_END_POINT: ${{ secrets.REGISTRY_END_POINT }}
-      BASTION_HOST: ${{ secrets.secrets.BASTION_HOST }}
-      BASTION_KEY: ${{ secrets.secrets.BASTION_KEY }}
+      BASTION_HOST: ${{ secrets.BASTION_HOST }}
+      BASTION_KEY: ${{ secrets.BASTION_KEY }}
 
     runs-on: ubuntu-latest
 
