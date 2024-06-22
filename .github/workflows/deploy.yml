@@ -50,7 +50,7 @@ jobs:
           key: ${{ env.BASTION_KEY }}
           script: |
             npm install
-            npx prisma migrate deploy
+            npm db:migrate
 
       - name: Login to Amazon ECR
         id: login-ecr
