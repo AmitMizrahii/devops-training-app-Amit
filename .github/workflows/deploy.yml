@@ -51,7 +51,8 @@ jobs:
           script: |
             curl -sL https://rpm.nodesource.com/setup_20.x | sudo bash -
             sudo yum install -y nodejs
-            npm install @prisma/cli
+            npm uninstall @prisma/cli 
+            npm install prisma --save-dev
             npx prisma db push --schema src/schema.prisma
 
       - name: Login to Amazon ECR
