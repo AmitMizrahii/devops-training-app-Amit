@@ -47,7 +47,6 @@ jobs:
           username: ec2-user
           key: ${{ secrets.BASTION_KEY }}
           script: |
-            cd /path/to/your/project
             npm install
             npx prisma migrate deploy
 
