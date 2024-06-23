@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --fix",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/src/index.js",
+    "start": "prisma generate --schema src/schema.prisma && node dist/src/index.js",
     "watch": "tsx --watch src/*.ts",
     "dev": "tsx src/index.ts",
     "docker:pg:start": "docker run --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=node_app -p 5432:5432 -d postgres:16-alpine",
