@@ -12,7 +12,6 @@
     "build": "tsc -p tsconfig.json",
     "start": "prisma generate --schema src/schema.prisma && node dist/src/index.js",
     "watch": "tsx --watch src/*.ts",
-    "postinstall": "prisma generate --schema src/schema.prisma",
     "dev": "tsx src/index.ts",
     "docker:pg:start": "docker run --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=node_app -p 5432:5432 -d postgres:16-alpine",
     "docker:pg:stop": "docker stop postgres && docker rm postgres",
