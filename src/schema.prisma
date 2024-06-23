@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://AmitIsADevopsMan:WhatAreYouTalkingAbout69@devops-training-infraamit.cruoqks8s42q.us-east-1.rds.amazonaws.com"
+  url      = env("PG_URL")
 }
 
 enum Role {
@@ -22,3 +22,6 @@ model users {
   createdAt  DateTime   @default(now())
   updatedAt  DateTime?  @updatedAt
 }
+
+
+
