@@ -54,7 +54,7 @@ jobs:
             npm uninstall @prisma/cli 
             npm install prisma --save-dev
             npx prisma db push --schema src/schema.prisma
-            prisma generate
+            npx prisma generate --schema src/schema.prisma
 
       - name: Login to Amazon ECR
         id: login-ecr
