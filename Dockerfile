@@ -24,5 +24,4 @@ EXPOSE 8080
 # RUN npm run db:migrate-dev
 
 # RUN npm run db:migrate
-
-CMD [ "node", "dist/index.js" ]
+CMD [ "npm", "start" ]
